@@ -1,3 +1,9 @@
+"""
+Краткое описание
+все что в пакете "meta" -- модели базы, пока не полные
+исключая DataBase.py.  Это класс для подключения к локальной БД
+"""
+
 from meta.Flights import Flights
 from meta.TicketFlights import Ticket_Flights
 from meta.Tickets import Tickets
@@ -6,7 +12,7 @@ import json
 
 
 class testCon:
-
+    # Возвращает "условные" данные в формате json (пока вроде не очень правильно...)
     def get_data(self):
         query = (Flights.select(Flights.flight_id,
                                 Flights.departure_airport,
